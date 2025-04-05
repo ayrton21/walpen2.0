@@ -1,0 +1,26 @@
+@use "../utils/variables" as *;
+
+//Estilos del footer
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .social-links {
+    margin: 10px 0;
+}
+
+.footer .social-link {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer .social-link:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,23 @@
+@use "utils/variables" as *;
+@use "utils/mixins" as *;
+@use "components/buttons";
+@use "components/hero";
+@use "components/novedades";
+@use "components/footer";
+@use "layout/layout";
+@use "components/clientes";
+@use "components/contacto";
+@use "components/sobre-nosotros";
+
+
+
+
+
+
+
+body {
+    font-family: $main-font;
+    color: $font-color;
+    background-color: rgb(13, 0, 154);
+}
+

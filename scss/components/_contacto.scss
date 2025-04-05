@@ -1,0 +1,44 @@
+@use "../utils/variables" as *;
+
+//Estilos de la pagina "contacto"
+
+.contacto {
+    background-color: #f5f5f5;
+
+    h2 {
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    p {
+        color: $font-color;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    form {   //formlario
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+        label {
+            font-weight: 600;
+            color: $font-color;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            width: 100%;
+            padding: 0.75rem;
+        }
+    }
+}

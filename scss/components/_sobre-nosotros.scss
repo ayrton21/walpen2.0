@@ -1,0 +1,50 @@
+@use "../utils/variables" as *;
+
+//Estilos de la pagina "sobre-nosotros"
+
+.sobre-nosotros {
+    background-color: #f8f9fa;
+    color: $font-color;
+
+    h2 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        color: $secondary-color;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 2rem auto;
+        line-height: 1.6;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li::before {
+            content: "✔️ ";
+            margin-right: 0.5rem;
+            color: $primary-color;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+    }
+
+    img {
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-height: 350px;
+        object-fit: cover;
+    }
+}

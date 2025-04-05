@@ -1,0 +1,229 @@
+@charset "UTF-8";
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hero .btn-custom {
+  background-color: #0d6efd;
+  padding: 12px 24px;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.hero .btn-custom:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+
+.hero {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  padding: 120px 0;
+  text-align: center;
+  color: white;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.hero a.btn {
+  background-color: #0d6efd;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.hero a.btn:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+  transform: scale(1.05);
+}
+
+.novedades {
+  background-color: #f8f9fa;
+}
+.novedades h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #0d6efd;
+}
+.novedades .card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.novedades .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.novedades .card img {
+  height: 200px;
+  object-fit: cover;
+}
+.novedades .card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.novedades .card .card-text {
+  font-size: 0.95rem;
+  color: #212529;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer .social-links {
+  margin: 10px 0;
+}
+
+.footer .social-link {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer .social-link:hover {
+  text-decoration: underline;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.clientes {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+.clientes h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #0d6efd;
+}
+.clientes .card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.clientes .card:hover {
+  transform: translateY(-5px);
+}
+.clientes .card .card-title {
+  font-size: 1.2rem;
+  color: #0d6efd;
+}
+.clientes .card .card-text {
+  font-size: 1rem;
+  color: #212529;
+}
+
+.contacto {
+  background-color: #f5f5f5;
+}
+.contacto h2 {
+  color: #0d6efd;
+  font-weight: bold;
+}
+.contacto p {
+  color: #212529;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.contacto form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+.contacto form label {
+  font-weight: 600;
+  color: #212529;
+}
+.contacto form input,
+.contacto form textarea {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.contacto form button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.sobre-nosotros {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+.sobre-nosotros h2 {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 2rem;
+}
+.sobre-nosotros h3 {
+  font-size: 1.75rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+.sobre-nosotros p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+.sobre-nosotros ul {
+  list-style: none;
+  padding-left: 0;
+}
+.sobre-nosotros ul li::before {
+  content: "✔️ ";
+  margin-right: 0.5rem;
+  color: #0d6efd;
+}
+.sobre-nosotros ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+.sobre-nosotros img {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 350px;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #212529;
+  background-color: rgb(13, 0, 154);
+}
+
+/*# sourceMappingURL=main.css.map */

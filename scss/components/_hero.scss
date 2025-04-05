@@ -1,0 +1,32 @@
+@use "../utils/variables" as *;
+
+//Estilos del Hero bienvenida
+
+.hero {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    padding: 120px 0; // Más espacio arriba y abajo
+    text-align: center;
+    color: white; // Para que el texto sea legible
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    a.btn {
+        background-color: $primary-color;
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            transform: scale(1.05);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@mixin tarjeta-producto {
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #003366;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        color: #555;
+    }
+}

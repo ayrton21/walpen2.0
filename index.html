@@ -8,9 +8,13 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS compilado -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -48,69 +52,128 @@
     </header>
 
     <!-- HERO / BIENVENIDA -->
-    <section class="hero text-center py-5">
+    <section class="hero d-flex align-items-center justify-content-center text-center">
         <div class="container">
-            <h1 class="display-4">Soluciones para el hogar y la construcción</h1>
-            <p class="lead">Todo lo que necesitás para tus proyectos, en un solo lugar.</p>
-            <a href="#novedades" class="btn-custom mt-3">Ver Novedades</a>
+            <h1 class="display-4">
+                <i class="bi bi-tools me-2"></i>
+                Soluciones para el hogar y la industria
+            </h1>
+            <p class="lead">Todo lo que necesitás, en un solo lugar.</p>
+            <p class="lead">Somos Walpen S.A, una empresa dedicada a la industria y el hogar, contamos con amplio
+                catálogo de productos y marcas para cubrir las necesidades de las industrias vitivinícolas,
+                metalúrgicas, mecánicas y eléctricas.</p>
+            <a href="pages/sobre-nosotros.html" class="btn btn-custom mt-4">¿Quiénes somos?</a>
         </div>
     </section>
+
     <main>
-        <section id="novedades" class="novedades py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">Novedades</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="./img/taladro-inalambrico.jpg" class="card-img-top" alt="Producto 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Taladro Inalámbrico</h5>
-                                <p class="card-text">Potente, recargable y compacto, ideal para trabajos en casa.</p>
-                            </div>
+        <section class="novedades-carousel py-5 bg-light"> <!--carrusel de bootstrap para novedades-index-->
+            <div class="contacto-mini d-flex justify-content-center gap-4">
+                <!-- Cuadro que simula un formulario -->
+                <a href="pages/contacto.html" class="box-contacto">
+                    <div class="overlay">
+                        <h5>¿Querés que te contactemos?</h5>
+                        <p>Dejanos tu nombre y tu email</p>
+                    </div>
+                </a>
+
+                <!-- Cuadro que simula un mapa -->
+                <a href="pages/contacto.html" class="box-mapa">
+                    <div class="overlay">
+                        <h5>¿Dónde estamos?</h5>
+                        <p>Conocé nuestra ubicación</p>
+                    </div>
+                </a>
+            </div>
+            <div class="container"> <!--carrusel de bootstrap para novedades-index-->
+                <h2 class="titulo-marcas">Novedades</h2>
+                <div class="novedades-scroll d-flex overflow-auto">
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/llaves-curvas-bremen.jpg" class="card-img-top" alt="Laves curvas">
+                        <div class="card-body">
+                            <h5 class="card-title">Llaves curvas Bremen</h5>
+                            <p class="card-text">Ideales llaves para llegar a lugar complicados. </p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="img/caja-de-herramientas.jpg" class="card-img-top" alt="Producto 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Caja de herramientas</h5>
-                                <p class="card-text">Incluye más de 50 piezas. Organización y funcionalidad en un solo
-                                    lugar.</p>
-                            </div>
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/llaves-rectas-bremen.jpg" class="card-img-top" alt="Llaves rectas">
+                        <div class="card-body">
+                            <h5 class="card-title">Llaves rectas Bremen</h5>
+                            <p class="card-text">Potente, recargable y compacto, ideal para trabajos en casa.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="img/amoladora.jpg" class="card-img-top" alt="Producto 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Amoladora Angular</h5>
-                                <p class="card-text">Rendimiento profesional para cortes precisos y rápidos.</p>
-                            </div>
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/promo-bremen.webp" class="card-img-top" alt="OFERTA tecnica">
+                        <div class="card-body">
+                            <h5 class="card-title">OFERTA! set para vos!</h5>
+                            <p class="card-text">Kit de herramientas de uso profesional</p>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="pages/novedades.html" class="btn btn-primary">Ver más novedades</a>
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/taladro-inalambrico.jpg" class="card-img-top" alt="Taladro Inalámbrico">
+                        <div class="card-body">
+                            <h5 class="card-title">Taladro Inalámbrico</h5>
+                            <p class="card-text">Potente, recargable y compacto, ideal para trabajos en casa.</p>
+                        </div>
+                    </div>
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/caja-de-herramientas.jpg" class="card-img-top" alt="Caja de herramientas">
+                        <div class="card-body">
+                            <h5 class="card-title">Caja de herramientas</h5>
+                            <p class="card-text">Incluye más de 50 piezas. Organización y funcionalidad en un solo
+                                lugar.</p>
+                        </div>
+                    </div>
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/amoladora.jpg" class="card-img-top" alt="Amoladora Angular">
+                        <div class="card-body">
+                            <h5 class="card-title">Amoladora Angular</h5>
+                            <p class="card-text">Rendimiento profesional para cortes precisos y rápidos.</p>
+                        </div>
+                    </div>
+                    <div class="card me-3 flex-shrink-0" style="width: 18rem;">
+                        <img src="img/tubos-bremen.webp" class="card-img-top" alt="Juego de tubos 1/4">
+                        <div class="card-body">
+                            <h5 class="card-title">Juego de tubos 1/4"</h5>
+                            <p class="card-text">Juego de tubos de uso profesional</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-    <!--Footer-->
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2025 Walpen. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
+
+        <section class="marca-carrusel py-5 bg-light"> <!--Carrusel de marcas-->
+            <h2 class="titulo-marcas"> Algunas de las 500 marcas que te ofrecemos</h2>
+            <div class="marca-scroll">
+                <a href="clientes.html" class="marca-item"><img src="img/marca-1.png" alt="ESAB"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/marca-2.png" alt="Bosch"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/marca-3.png" alt="Dremel"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/marca-4.png" alt="Makita"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/marca-5.png" alt="DeWalt"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/marca-6.png" alt="Stihl"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/bremen-gpt.png" alt="Stihl"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/lusqtoff-gpt.png" alt="Stihl"></a>
+                <a href="clientes.html" class="marca-item"><img src="img/marca-6.png" alt="Stihl"></a>
             </div>
-            <p>Contacto: contacto@walpen.com | Tel: +123 456 789</p>
+        </section>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" class="social-icon" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" class="social-icon" target="_blank"><i class="bi bi-facebook"></i></a>
+        </div>
+        
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2025 Ferretería Walpen. Todos los derechos reservados.</p>
+            <p class="mb-0">Seguinos: @WalpenOficial | Contacto: contacto@walpen.com</p>
         </div>
     </footer>
 
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

@@ -1,10 +1,13 @@
 @use "../utils/variables" as *;
 
-//estilos de la pagina "clientes"
-
+// Estilos para la página "Clientes"
 .clientes {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 60px 0;
+    background-image: url('/img/brmen-fondo.webp'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hace que el fondo se quede fijo al hacer scroll */
 
     h2 {
         font-weight: bold;
@@ -12,9 +15,21 @@
         color: $primary-color;
     }
 
+    // Estilos de las tarjetas de clientes
     .card {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        border-left: 5px solid $primary-color;
+        padding-left: 1rem;
+        position: relative;
+
+        &::before {
+            content: "💬";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+        }
 
         &:hover {
             transform: translateY(-5px);
@@ -30,4 +45,76 @@
             color: $font-color;
         }
     }
+
+    // Estilos del formulario de opiniones
+    form {
+        background-color: #f8f9fa;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 2px solid $primary-color;
+
+        input, textarea {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            width: 100%;
+
+            &:focus {
+                border-color: $primary-color;
+                box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+            }
+        }
+
+        button {
+            margin-top: 1rem;
+            font-weight: bold;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 1.5rem;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+// Animación para las tarjetas
+.card {
+    animation: fadeIn 0.8s ease-in-out;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+// Responsividad
+@media (max-width: 576px) {
+    .clientes h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+.clientes h3 {
+    color: #00aaff; /* Celeste */
+    font-weight: bold;
+    margin-bottom: 20px;
 }

@@ -1,0 +1,27 @@
+//estilos de las tarjetas de ovedades
+
+.novedades-carousel {
+    h2 {
+        color: #003366;
+    }
+
+    .novedades-scroll {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+
+        .card {
+            scroll-snap-align: start;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            img {
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+    }
+}

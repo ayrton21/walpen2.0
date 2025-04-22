@@ -1,50 +1,163 @@
 @use "../utils/variables" as *;
 
-//Estilos de la pagina "sobre-nosotros"
+
 
 .sobre-nosotros {
-    background-color: #f8f9fa;
-    color: $font-color;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/brmen-fondo.webp') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 
-    h2 {
-        font-size: 2.5rem;
-        color: $primary-color;
-        margin-bottom: 2rem;
+    h2,
+    h3,
+    p,
+    li {
+        color: #f1f1f1;
+    }
+}
+
+
+
+/* Carrusel de marcas en "Sobre Nosotros" */
+.marca-carrusel-sobre-nosotros {
+    background-color: transparent;
+    /* Fondo transparente */
+    padding: 2rem 0;
+    /* Espaciado en la parte superior e inferior */
+    margin-top: 2rem;
+    /* Un poco de espacio arriba */
+}
+
+.titulo-marcas-sobre-nosotros {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    /* Centrar el título */
+    color: #0077b6;
+    /* Azul más claro como el de las otras secciones */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+
+    /* Espaciado de letras para un toque industrial */
+    i {
+        font-size: 2.2rem;
+        color: #00aaff;
     }
 
-    h3 {
-        font-size: 1.75rem;
-        color: $secondary-color;
+    &::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 60%;
+        background-color: #00aaff;
+        /* Azul moderno para el subrayado */
+        margin: 8px auto 0;
+        border-radius: 2px;
+    }
+}
+
+.marca-scroll-sobre-nosotros {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    /* Espaciado entre los elementos */
+    padding-bottom: 1rem;
+    /* Asegura que los logos no se corten */
+
+    a {
+        display: block;
+        width: 150px;
+
+        /* Ajusta el tamaño de los logos */
+        img {
+            width: 100%;
+            height: auto;
+            /* Asegura que las imágenes se ajusten */
+            object-fit: contain;
+            /* Ajuste para evitar distorsión */
+            transition: transform 0.3s ease;
+            /* Suaviza el efecto hover */
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+            /* Efecto al pasar el ratón */
+        }
+    }
+}
+
+.marca-scroll-sobre-nosotros::-webkit-scrollbar {
+    height: 6px;
+}
+
+.marca-scroll-sobre-nosotros::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+.marca-scroll-sobre-nosotros::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Asegurarnos de que se vea bien en pantallas pequeñas */
+@media (max-width: 768px) {
+    .marca-scroll-sobre-nosotros {
+        gap: 1rem;
+        /* Menos espacio en pantallas pequeñas */
+    }
+
+    .marca-item-sobre-nosotros img {
+        width: 120px;
+        /* Ajustamos el tamaño de las imágenes en pantallas más pequeñas */
+    }
+}
+
+h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: #f8f9fa;
+}
+
+.titulo-marcas1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+
+
+    i {
+        color: #00aaff;
+        font-size: 1.6rem;
+    }
+}
+//estilos de la caja que contiene la foto de la ferreteria
+.caja-foto {
+    border: 2px solid #3c3e42;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #00033b95;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+
+    .titulo-foto {
+        font-size: 1.2rem;
+        font-weight: bold;
         margin-bottom: 1rem;
-    }
+        color: #ffffff;
+        display: flex;
+        align-items: center;
 
-    p {
-        font-size: 1.1rem;
-        max-width: 800px;
-        margin: 0 auto 2rem auto;
-        line-height: 1.6;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 0;
-
-        li::before {
-            content: "✔️ ";
-            margin-right: 0.5rem;
-            color: $primary-color;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
+        i {
+            color: #00aaff;
+            font-size: 1.4rem;
         }
     }
 
-    img {
-        border-radius: 1rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        max-height: 350px;
-        object-fit: cover;
+    .descripcion-foto {
+        font-style: italic;
+        color: #ffffff;
     }
 }

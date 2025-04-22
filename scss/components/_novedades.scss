@@ -1,39 +1,69 @@
-@use "../utils/variables" as *;
 
-//Estilos de la página "novedades"
-.novedades {
-    background-color: #f8f9fa;
 
-    h2 {
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    background-color: #030063;
+    color: white;
+    position: relative;
+    padding: 1rem;
+    width: 250px;
+    margin-top: 0;
+    height: calc(100vh - 56px);
+
+    h5 {
+        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
         font-weight: bold;
-        margin-bottom: 2rem;
-        color: $primary-color;
     }
 
-    .card {
-        border: none;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
+    ul {
+        list-style: none;
+        padding: 0;
 
-        &:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
+        li {
+            margin-bottom: 1rem;
 
-        img {
-            height: 200px;
-            object-fit: cover;
-        }
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                display: block;
+                transition: color 0.3s ease;
 
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .card-text {
-            font-size: 0.95rem;
-            color: $font-color;
+                &:hover {
+                    color: #00aaff;
+                }
+            }
         }
     }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .barra-lateral {
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 0;
+        height: auto;
+    }
+}
+
+/* Carruseles */
+.carousel-inner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    height: 200px; // o el tamaño que prefieras
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
 }
